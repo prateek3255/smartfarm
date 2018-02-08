@@ -1,0 +1,61 @@
+<ion-view view-title="App Intro">
+        <ion-header-bar align-title="center" class="bar-calm">
+                <h1 class="title">Register</h1>
+              </ion-header-bar>
+    <ion-content scroll="true" ng-controller="regCtrl as reg">
+        
+        <div class="list">
+            <label class="item item-input item-floating-label">
+              <span class="input-label">Name</span>
+              <input type="text" placeholder="Name" ng-model="reg.name">
+            </label>
+            <label class="item item-input item-floating-label">
+              <span class="input-label">Aadhar No.</span>
+              <input type="text" placeholder="Aadhar No." ng-model="reg.aadhar">
+            </label>
+            <label class="item item-input item-floating-label">
+              <span class="input-label">Contact</span>
+              <input type="text" placeholder="Contact" ng-model="reg.contact">
+            </label>
+            <label class="item item-input item-floating-label">
+                <span class="input-label">Land Area (sq. km)</span>
+                <input type="text" placeholder="Land Area" ng-model="reg.area">
+              </label>
+            <label class="item item-input item-floating-label">
+                <span class="input-label">Village</span>
+                <input type="text" placeholder="Village" ng-model="reg.village">
+              </label>
+              <!-- <label class="item item-input item-floating-label">
+                <span class="input-label">District</span>
+                <input type="text" placeholder="District" ng-model="reg.district">
+              </label> -->
+              <!-- <label class="item item-input item-stacked-label">
+                <span class="input-label">State</span><br><br>
+                Rajasthan
+              </label> -->
+              <label class="item item-input item-select">
+                <div class="input-label">
+                  District
+                </div>
+                <select ng-model="reg.district">
+                  <option ng-repeat="dis in reg.lod" value="{{dis}}">{{dis}}</option>
+                </select>
+              </label>
+              <label class="item item-input item-stacked-label">
+                  <span class="input-label">State</span><br><br>
+                  Rajasthan
+                </label>
+              <!-- <div>Preferred Crops</div>
+              <ion-list>
+                    
+                      <ion-checkbox>Wheat</ion-checkbox>
+                      <ion-checkbox>Maize</ion-checkbox>
+                      <ion-checkbox>Rice</ion-checkbox>
+                    
+                    </ion-list> -->
+              <button class="button button-block button-balanced" ng-click="reg.submit()">
+                Submit
+              </button>
+          </div>
+    </ion-content>
+</ion-view>
